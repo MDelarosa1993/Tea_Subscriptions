@@ -1,4 +1,3 @@
-/* Container for the entire subscription detail page */
 .subscription-container {
   padding: 2rem;
   max-width: 1200px;
@@ -6,7 +5,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* Title for the Subscription page */
 .subscription-title {
   text-align: center;
   font-size: 2.5rem;
@@ -14,7 +12,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* Main section that contains subscription details */
 .subscription-details {
   background-color: #f9f9f9;
   border-radius: 8px;
@@ -22,7 +19,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Subscription name and basic details */
 .subscription-name {
   font-size: 2rem;
   color: #333;
@@ -38,14 +34,12 @@
   margin: 0.5rem 0;
 }
 
-/* Heading for teas section */
 .teas-heading {
   font-size: 1.6rem;
   color: #333;
   margin-bottom: 1rem;
 }
 
-/* Tea list styling */
 .tea-list {
   list-style-type: none;
   padding: 0;
@@ -75,10 +69,54 @@
   margin: 0.5rem 0;
 }
 
-/* Error and Loading states */
 .error, .loading {
   text-align: center;
   font-size: 1.5rem;
   color: #e74c3c;
   margin-top: 2rem;
+}
+
+.status-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.status-actions button {
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cancel-button {
+  background-color: #e74c3c; 
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #c0392b; 
+  transform: scale(1.05); 
+}
+
+.cancel-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(231, 76, 60, 0.6);
+}
+
+.reactivate-button {
+  background-color: #2ecc71; 
+  color: white;
+}
+
+.reactivate-button:hover {
+  background-color: #27ae60; 
+  transform: scale(1.05); 
+}
+
+.reactivate-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(46, 204, 113, 0.6);
 }
