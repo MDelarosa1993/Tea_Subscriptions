@@ -8,9 +8,9 @@ const Home = () => {
       <h1>Welcome to Tea Subscriptions</h1>
       <p>Discover your favorite tea subscription today!</p>
       <div className="navigation">
-        <Link to="/customers">Manage Customers</Link>
+        <Link to="/customers">Manage Subscriptions</Link>
         <Link to="/teas">View Teas</Link>
-        <Link to="/subscriptions">Subscribe to Tea</Link>
+        <Link to="/subscriptions">Subscribe to Teas</Link>
       </div>
     </div>
   )
