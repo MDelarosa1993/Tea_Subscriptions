@@ -62,11 +62,12 @@ p {
   padding: 20px;
   margin: 20px auto;
   max-width: 600px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .subscription-card:hover {
   transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .subscription-card h3 {
