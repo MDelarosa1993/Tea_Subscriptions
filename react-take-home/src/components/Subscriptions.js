@@ -21,6 +21,32 @@ function Subscription() {
       .catch((err) => setError(err.message));
   }, [id]);
 
+  const handleStatusChange = (newStatus) => {
+    fetch(`http://localhost:3000/api/v1/subscriptions/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ status: newStatus }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to update subscription status');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setSubscription((prevSubscription) => ({
+          ...prevSubscription,
+          attributes: {
+            ...prevSubscription.attributes,
+            status: newStatus,
+          },
+        }));
+      })
+      .catch((err) => setError(err.message));
+  };
+
   if (error) return <div className="error">Error: {error}</div>;
   if (!subscription) return <div className="loading">Loading...</div>;
 
@@ -34,6 +60,7 @@ function Subscription() {
           <p><strong>Price:</strong> ${subscription.attributes.price}</p>
           <p><strong>Status:</strong> {subscription.attributes.status}</p>
           <p><strong>Frequency:</strong> {subscription.attributes.frequency}</p>
+          <p><strong>Customer: {subscription.attributes.customers.first_name}</strong></p>
         </div>
 
         <h3 className="teas-heading">Teas Included:</h3>
@@ -47,6 +74,19 @@ function Subscription() {
             </li>
           ))}
         </ul>
+
+        {/* Buttons to cancel or reactivate the subscription */}
+        <div className="status-actions">
+          {subscription.attributes.status === 'active' ? (
+            <button className="cancel-button" onClick={() => handleStatusChange('cancelled')}>
+              Cancel Subscription
+            </button>
+          ) : (
+            <button className="reactivate-button" onClick={() => handleStatusChange('active')}>
+              Reactivate Subscription
+            </button>
+          )}
+        </div>
       </section>
     </div>
   );

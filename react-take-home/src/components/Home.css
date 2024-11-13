@@ -140,3 +140,48 @@ p {
 .button:hover {
   background-color: #3c6348;
 }
+
+/* Home.css */
+
+/* Search Bar Container */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px 15px;
+  font-size: 1.1em;
+  border: 2px solid #D7A77C; /* Light gold color */
+  border-radius: 30px;
+  background-color: #FFF9F3; /* Light background */
+  color: #4E342E; /* Dark brown color */
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #C48B6E; /* Darker gold */
+  background-color: #FFF; /* White background on focus */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-input::placeholder {
+  color: #B3B3B3; /* Lighter grey for placeholder */
+  font-style: italic;
+}
+
+/* Optional: Add a search icon if desired */
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #D7A77C;
+  font-size: 1.2em;
+  pointer-events: none; /* Prevents icon from interfering with input */
+}
