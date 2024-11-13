@@ -31,6 +31,9 @@ function Home() {
   return (
     <div className="Home">
       <h1>Welcome to Tea Subscriptions!</h1>
+      <Link to={"/teas"}>
+      <h2>Checkout Our Tea Selection</h2>
+      </Link>
       <div className="search-container">
         <input
           type="text"

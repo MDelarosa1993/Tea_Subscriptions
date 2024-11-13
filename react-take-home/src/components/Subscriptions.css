@@ -2,7 +2,7 @@
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  font-family: Arial, sans-serif;
+  font-family: 'Georgia', serif;
 }
 
 .subscription-title {
@@ -48,9 +48,14 @@
 .tea-card {
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   padding: 1.5rem;
   margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.tea-card:hover {
+  transform: translateY(-8px); /* Slightly lift the card */
+  cursor: pointer; /* Change cursor to pointer for interactivity */
 }
 
 .tea-title {
