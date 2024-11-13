@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import './Subscriptions.css'; // Importing the CSS file
+import './Subscriptions.css'; 
 
 function Subscription() {
   const { id } = useParams();
@@ -74,8 +74,6 @@ function Subscription() {
             </li>
           ))}
         </ul>
-
-        {/* Buttons to cancel or reactivate the subscription */}
         <div className="status-actions">
           {subscription.attributes.status === 'active' ? (
             <button className="cancel-button" onClick={() => handleStatusChange('cancelled')}>
