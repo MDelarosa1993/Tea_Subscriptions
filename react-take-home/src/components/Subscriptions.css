@@ -1,27 +1,21 @@
 .subscription-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
   font-family: 'Georgia', serif;
 }
 
 .subscription-title {
   text-align: center;
   font-size: 2.5rem;
-  color: #2a2a2a;
+  color: white;
   margin-bottom: 1.5rem;
-}
-
-.subscription-details {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  padding: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .subscription-name {
   font-size: 2rem;
-  color: #333;
+  color: white;
   margin-bottom: 1rem;
 }
 
@@ -31,12 +25,13 @@
 }
 
 .subscription-info p {
+  color: white;
   margin: 0.5rem 0;
 }
 
 .teas-heading {
   font-size: 1.6rem;
-  color: #333;
+  color: white;
   margin-bottom: 1rem;
 }
 
@@ -45,17 +40,17 @@
   padding: 0;
 }
 
+
 .tea-card {
-  background-color: #ffffff;
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 0.5rem;
   margin-bottom: 1.5rem;
   transition: all 0.3s ease;
 }
 
 .tea-card:hover {
-  transform: translateY(-8px); /* Slightly lift the card */
-  cursor: pointer; /* Change cursor to pointer for interactivity */
+  transform: translateY(-8px); 
+  cursor: pointer; 
 }
 
 .tea-title {
@@ -74,6 +69,13 @@
   margin: 0.5rem 0;
 }
 
+.tea-card img {
+  width: 600px;  
+  height: auto;  
+  border-radius: 8px;  
+  margin-right: 15px; 
+}
+
 .error, .loading {
   text-align: center;
   font-size: 1.5rem;
@@ -87,7 +89,7 @@
   margin-top: 20px;
 }
 
-.status-actions button {
+.status-actions, button {
   padding: 10px 20px;
   font-size: 1.1em;
   border-radius: 5px;
@@ -124,4 +126,60 @@
 .reactivate-button:focus {
   outline: none;
   box-shadow: 0 0 5px rgba(46, 204, 113, 0.6);
+}
+
+@media (min-width: 992px) {
+  .subscription-title {
+    font-size: 3rem;
+  }
+  .subscription-name {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .subscription-container {
+    padding: 1.5rem;
+  }
+  .subscription-title {
+    font-size: 2.2rem;
+  }
+  .subscription-name {
+    font-size: 1.8rem;
+  }
+  .tea-card img {
+    width: 80%; 
+  }
+  .tea-title {
+    font-size: 1.3rem;
+  }
+  .tea-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .subscription-container {
+    padding: 1rem;
+  }
+  .subscription-title {
+    font-size: 1.8rem;
+  }
+  .subscription-name {
+    font-size: 1.5rem;
+  }
+  .tea-title {
+    font-size: 1.2rem;
+  }
+  .tea-description {
+    font-size: 0.9rem;
+  }
+  .tea-card img {
+    width: 100%; 
+    margin-right: 0;
+  }
+  .status-actions button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
 }
