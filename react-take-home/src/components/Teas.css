@@ -1,9 +1,17 @@
+/* General Body and Typography */
 body {
   font-family: 'Georgia', serif;
   color: #333;
   background-color: #faf7f4;
   margin: 0;
   padding: 0;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 700;
 }
 
 h1, h2, h3, h4 {
@@ -13,78 +21,86 @@ h1, h2, h3, h4 {
   font-weight: 700;
 }
 
-h1 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-top: 40px;
-}
-
 h3 {
   font-size: 1.5rem;
   color: #4a7c59;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 p {
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
+  margin: 0 0 1rem;
 }
 
+/* Container for Teas */
 .teas-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
+/* Title Section */
 .title h1 {
   font-size: 2rem;
   text-align: center;
   color: #333;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 
+/* Tea Cards Grid */
 .tea-cards-container {
   display: grid;
-  grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsively fills available space */
+  gap: 50px;
   margin-bottom: 20px;
   justify-items: center;
 }
 
-
+/* Individual Tea Item Card */
 .tea-item {
   background-color: #fff;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s ease;
-  transition: all 0.3s ease;
-  width: 400px;
-  
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+  width: 100%; 
+  max-width: 400px;
 }
 
 .tea-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px); /* Slight raise on hover */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
 }
 
-.tea-item img{
+/* Tea Item Image */
+.tea-item img {
   width: 200px;
+  height: auto;
+  margin-bottom: 15px; /* Add space between image and text */
+  border-radius: 5px;
 }
 
+/* Tea Title */
 .tea-title {
   font-size: 1.4rem;
   color: #333;
   font-weight: 600;
+  margin-bottom: 10px; /* Add space below title */
 }
 
+/* Tea Description */
 .tea-description {
   font-size: 1rem;
   color: #555;
   margin-top: 10px;
+  line-height: 1.6; /* For better text readability */
 }
 
+/* Brew Time and Temperature Styling */
 .tea-brew-time,
 .tea-temperature {
   font-size: 0.9rem;
@@ -92,6 +108,7 @@ p {
   margin-top: 5px;
 }
 
+/* Loading State */
 .loading {
   text-align: center;
   font-size: 1.5rem;
@@ -99,3 +116,43 @@ p {
   margin-top: 50px;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tea-cards-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid layout for smaller screens */
+    gap: 20px;
+  }
+
+  .tea-item {
+    padding: 15px; /* Adjust padding for smaller screens */
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 14px; /* Adjust font size for small screens */
+  }
+
+  .title h1,
+  .tea-title {
+    font-size: 1.5rem;
+  }
+
+  .tea-description {
+    font-size: 0.9rem;
+  }
+
+  .tea-item {
+    padding: 10px;
+  }
+
+  .tea-item img {
+    width: 180px; /* Slightly smaller images on mobile */
+  }
+
+  .loading {
+    font-size: 1.2rem; /* Adjust loading text size for smaller screens */
+  }
+}

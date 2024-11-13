@@ -34,7 +34,7 @@ function Home() {
       <Link to={"/teas"}>
       <h2 style={{color: 'white'}}>Checkout Our Tea Selection</h2>
       </Link>
-      <div className="search-container">
+      <div className="home-container">
         <input
           type="text"
           placeholder="Search subscriptions..."
@@ -47,7 +47,7 @@ function Home() {
         <h2 style={{color: 'white'}}>Our Subscriptions</h2>
         {filteredSubscriptions.length > 0 ? (
           filteredSubscriptions.map((subscription) => (
-            <div className="subscription-card" key={subscription.id}>
+            <div className="home-card" key={subscription.id}>
               <Link to={`/subscriptions/${subscription.id}`} >
                 <h3>{subscription.attributes.title}</h3>
               </Link>
@@ -69,7 +69,7 @@ function Home() {
             </div>
           ))
         ) : (
-          <p>No subscriptions found matching your search.</p>
+          <p className='error-message'>No subscriptions found matching your search.</p>
         )}
       </section>
     </div>

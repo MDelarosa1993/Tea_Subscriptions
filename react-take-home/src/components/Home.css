@@ -11,18 +11,17 @@ body {
 h1, h2, h3, h4 {
   margin: 0;
   padding-bottom: 10px;
-  font-weight: 700;
+  font-weight: bold;
 }
 
-h1 {
-  color: white;
+.Home h2{
   font-size: 2.5rem;
   text-align: center;
-  margin-top: 40px;
+  margin: 30px 0 20px;
 }
 
-h2 {
-  font-size: 1.75rem;
+.section h2 {
+  font-size: 2.5rem;
   text-align: center;
   margin: 30px 0 20px;
 }
@@ -44,76 +43,71 @@ p {
 }
 
 
-.subscription-card {
-  display: flex;
-  flex-direction: column;
-  background-color: #fefefe;
-  border: 1px solid #eee;
-  border-radius: 8px;
+
+/* Subscription card styles */
+.home-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  padding-right: 30px;
-  margin: 20px auto;
-  max-width: 600px;
-  transition: all 0.3s ease;
+  margin: 15px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.subscription-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+.home-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.subscription-card h3 {
-  color: #333;
-  margin-bottom: 10px;
+.home-card h3 {
   font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
 }
 
-.subscription-card p {
-  margin: 4px 0;
+.home-card h4 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #555;
 }
 
 .teas-list {
-  list-style: none;
-  padding: 0;
+  list-style-type: none;
+  padding-left: 0;
   margin-top: 10px;
 }
 
 .teas-list li {
-  margin: 10px 0;
-  border-top: 1px solid #eee;
-  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
 }
 
-.teas-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+.teas-list p {
+  margin-left: 30px;
 }
 
-
-.tea-card {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+.tea-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 15px;
 }
 
-.tea-card:hover {
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+.tea-image + strong {
+  font-size: 1rem;
+  color: #555;
+  margin-right: 5px;
 }
 
-.tea-card h4 {
-  color: #444;
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-.tea-card p {
+.tea-image + p {
   font-size: 0.9rem;
-  color: #666;
-  margin: 5px 0;
+  color: #777;
+  margin-top: 2px;
 }
 
 .button {
@@ -163,6 +157,11 @@ p {
 .search-input::placeholder {
   color: #B3B3B3; 
   font-style: italic;
+}
+
+.error-message{
+  color: white;
+  font-size: 2.5rem;
 }
 
 @media (max-width: 1200px) {
