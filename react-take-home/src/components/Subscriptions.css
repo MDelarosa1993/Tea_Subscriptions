@@ -1,0 +1,84 @@
+/* Container for the entire subscription detail page */
+.subscription-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Title for the Subscription page */
+.subscription-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2a2a2a;
+  margin-bottom: 1.5rem;
+}
+
+/* Main section that contains subscription details */
+.subscription-details {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Subscription name and basic details */
+.subscription-name {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.subscription-info {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.subscription-info p {
+  margin: 0.5rem 0;
+}
+
+/* Heading for teas section */
+.teas-heading {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Tea list styling */
+.tea-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tea-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tea-title {
+  font-size: 1.4rem;
+  color: #2a2a2a;
+  margin-bottom: 0.5rem;
+}
+
+.tea-description {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.tea-card p {
+  margin: 0.5rem 0;
+}
+
+/* Error and Loading states */
+.error, .loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #e74c3c;
+  margin-top: 2rem;
+}

@@ -1,47 +1,142 @@
-.home {
-  height: 100vh; /* Full height of the viewport */
-  background-image: url("https://www.shutterstock.com/image-photo/army-assorted-metal-ceramic-turkish-260nw-271338722.jpg"); /* Replace this URL with your copied image URL */
-  background-size: cover; /* Makes the background cover the entire container */
-  background-position: center; /* Centers the image in the container */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  color: white; /* Optional: Set text color to white for contrast */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+/* General Styles */
+body {
+  font-family: 'Georgia', serif;
+  color: #333;
+  background-color: #faf7f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  color: #333;
+  margin: 0;
+  padding-bottom: 10px;
+  font-weight: 700;
 }
 
 h1 {
-  font-size: 3rem;
-  margin: 0;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 40px;
+}
+
+h2 {
+  font-size: 1.75rem;
+  text-align: center;
+  margin: 30px 0 20px;
+}
+
+h3, h4 {
+  font-size: 1.2rem;
 }
 
 p {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
 }
 
-.navigation {
+/* Main Container */
+.Home {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Subscription Card Styling */
+.subscription-card {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  background-color: #fefefe;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  transition: transform 0.3s ease;
 }
 
-.navigation a {
-  font-size: 1.2rem;
+.subscription-card:hover {
+  transform: scale(1.02);
+}
+
+.subscription-card h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.subscription-card p {
+  margin: 4px 0;
+}
+
+.teas-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.teas-list li {
+  margin: 10px 0;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+/* Teas Grid */
+.teas-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.tea-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.tea-card:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.tea-card h4 {
+  color: #444;
   font-weight: bold;
-  text-decoration: none;
-  color: #f5a623; /* Bright color for visibility */
-  padding: 10px 20px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.tea-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Button Style */
+.button {
+  display: inline-block;
+  background-color: #4a7c59;
+  color: #fff;
+  padding: 10px 15px;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background to make it stand out */
-  transition: all 0.3s ease;
+  font-size: 1rem;
+  margin-top: 15px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-.navigation a:hover {
-  color: #fff; /* White color when hovered */
-  background-color: #f5a623; /* Background color on hover */
-  transform: scale(1.1); /* Slightly scale up on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for a popping effect */
+.button:hover {
+  background-color: #3c6348;
 }
-
