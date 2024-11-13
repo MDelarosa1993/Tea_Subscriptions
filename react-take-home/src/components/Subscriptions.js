@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import './Subscriptions.css'; 
 
 function Subscription() {
@@ -60,7 +60,9 @@ function Subscription() {
           <p><strong>Price:</strong> ${subscription.attributes.price}</p>
           <p><strong>Status:</strong> {subscription.attributes.status}</p>
           <p><strong>Frequency:</strong> {subscription.attributes.frequency}</p>
-          <p><strong>Customer: {subscription.attributes.customers.first_name}</strong></p>
+          {subscription.attributes.status !== 'cancelled' && (
+            <p><strong>Customer:</strong> {subscription.attributes.customers.first_name}</p>
+          )}
         </div>
 
         <h3 className="teas-heading">Teas Included:</h3>
@@ -71,6 +73,11 @@ function Subscription() {
               <p className="tea-description">{tea.description}</p>
               <p><strong>Brew Time:</strong> {tea.brew_time} mins</p>
               <p><strong>Temperature:</strong> {tea.temperature}°F</p>
+              <img
+                src="https://media.istockphoto.com/id/1281873710/photo/cup-of-black-tea-served-with-biscuits.webp?a=1&b=1&s=612x612&w=0&k=20&c=jEQiA_4W9OM6OeXnLjto0wc9cpKLpHQlc7uU5qVjSeM="  // Path to your default image
+                alt={tea.title}
+                className="tea-image"
+              />
             </li>
           ))}
         </ul>
@@ -85,6 +92,9 @@ function Subscription() {
             </button>
           )}
         </div>
+          <Link to={"/"}>
+          <button className='back-to-main'>Back to Subscription Page</button>
+          </Link>
       </section>
     </div>
   );

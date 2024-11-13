@@ -3,18 +3,19 @@ body {
   font-family: 'Georgia', serif;
   color: #333;
   background-color: #faf7f4;
+  background-image: url("https://plus.unsplash.com/premium_photo-1661594835845-7035de5abb30?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dGVhfGVufDB8fDB8fHww");
   margin: 0;
   padding: 0;
 }
 
 h1, h2, h3, h4 {
-  color: #333;
   margin: 0;
   padding-bottom: 10px;
   font-weight: 700;
 }
 
 h1 {
+  color: white;
   font-size: 2.5rem;
   text-align: center;
   margin-top: 40px;
@@ -36,23 +37,13 @@ p {
   line-height: 1.6;
 }
 
-/* Main Container */
 .Home {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Section Styling */
-.section {
-  margin-bottom: 50px;
-  padding: 20px;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
-}
 
-/* Subscription Card Styling */
 .subscription-card {
   display: flex;
   flex-direction: column;
@@ -60,6 +51,7 @@ p {
   border: 1px solid #eee;
   border-radius: 8px;
   padding: 20px;
+  padding-right: 30px;
   margin: 20px auto;
   max-width: 600px;
   transition: all 0.3s ease;
@@ -92,12 +84,12 @@ p {
   padding-top: 10px;
 }
 
-/* Teas Grid */
 .teas-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
+
 
 .tea-card {
   background-color: #fff;
@@ -124,7 +116,6 @@ p {
   margin: 5px 0;
 }
 
-/* Button Style */
 .button {
   display: inline-block;
   background-color: #4a7c59;
@@ -142,9 +133,7 @@ p {
   background-color: #3c6348;
 }
 
-/* Home.css */
 
-/* Search Bar Container */
 .search-container {
   display: flex;
   justify-content: center;
@@ -157,32 +146,93 @@ p {
   max-width: 500px;
   padding: 10px 15px;
   font-size: 1.1em;
-  border: 2px solid #D7A77C; /* Light gold color */
+  border: 2px solid #D7A77C; 
   border-radius: 30px;
-  background-color: #FFF9F3; /* Light background */
-  color: #4E342E; /* Dark brown color */
+  background-color: #FFF9F3; 
+  color: #4E342E; 
   outline: none;
   transition: all 0.3s ease;
 }
 
 .search-input:focus {
-  border-color: #C48B6E; /* Darker gold */
-  background-color: #FFF; /* White background on focus */
+  border-color: #C48B6E; 
+  background-color: #FFF; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .search-input::placeholder {
-  color: #B3B3B3; /* Lighter grey for placeholder */
+  color: #B3B3B3; 
   font-style: italic;
 }
 
-/* Optional: Add a search icon if desired */
-.search-icon {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #D7A77C;
-  font-size: 1.2em;
-  pointer-events: none; /* Prevents icon from interfering with input */
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .subscription-card {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  .subscription-card {
+    max-width: 90%;
+    padding: 15px;
+  }
+  .tea-card {
+    padding: 15px;
+  }
+  .button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+  .search-input {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .subscription-card {
+    max-width: 95%;
+    padding: 10px;
+  }
+  .button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+  .search-input {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+  .teas-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .tea-image {
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tea-image {
+    max-width: 60px;
+  }
 }

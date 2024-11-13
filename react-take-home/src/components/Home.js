@@ -30,9 +30,9 @@ function Home() {
 
   return (
     <div className="Home">
-      <h1>Welcome to Tea Subscriptions!</h1>
+      <h1 style={{color: 'white'}}>Welcome to Tea Subscriptions!</h1>
       <Link to={"/teas"}>
-      <h2>Checkout Our Tea Selection</h2>
+      <h2 style={{color: 'white'}}>Checkout Our Tea Selection</h2>
       </Link>
       <div className="search-container">
         <input
@@ -44,7 +44,7 @@ function Home() {
         />
       </div>
       <section className="section">
-        <h2>Our Subscriptions</h2>
+        <h2 style={{color: 'white'}}>Our Subscriptions</h2>
         {filteredSubscriptions.length > 0 ? (
           filteredSubscriptions.map((subscription) => (
             <div className="subscription-card" key={subscription.id}>
@@ -55,6 +55,11 @@ function Home() {
               <ul className="teas-list">
                 {subscription.attributes.teas.map((tea) => (
                   <li key={`${subscription.id}-${tea.id}`}>
+                    <img
+                      src="https://media.istockphoto.com/id/1281873710/photo/cup-of-black-tea-served-with-biscuits.webp?a=1&b=1&s=612x612&w=0&k=20&c=jEQiA_4W9OM6OeXnLjto0wc9cpKLpHQlc7uU5qVjSeM="  // Path to your default image
+                      alt={tea.title}
+                      className="tea-image"
+                    />
                     <strong>{tea.title}</strong>: {tea.description}
                     <p>Brew Time: {tea.brew_time} mins</p>
                     <p>Temperature: {tea.temperature}°F</p>
