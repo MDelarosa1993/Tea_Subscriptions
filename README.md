@@ -1,7 +1,5 @@
 # react-take-home
 
-A well-structured README for your React app provides essential information for users and developers. Here’s a suggested structure you can follow:
-
 ---
 
 # Tea Subscription App
@@ -18,7 +16,7 @@ A well-structured README for your React app provides essential information for u
 
 ### Overview
 
-**Tea Subscription App** is a React-based application where users can explore different tea subscriptions, learn about tea details, and search for specific teas. This project allows users to view subscription options, browse teas, and explore various features like a search bar to filter subscriptions and teas.
+**Tea Subscription App** is a React-based application where users can explore different tea subscriptions, learn about tea details, and search for specific teas. This project allows users to view subscription options, browse teas, and explore various features like a search bar to filter subscriptions.
 
 ![react-take-home-screenshot](image.png)
 
@@ -73,6 +71,7 @@ Once the app is running, you can:
 - **React Router**: For managing page navigation.
 - **CSS**: For styling the app.
 - **Npm**: For running the app and managing dependencies.
+- **RubyOnRails**: For the Api
 
 ---
 
@@ -86,4 +85,4 @@ Once the app is running, you can:
 
 ---
 
-This structure provides all the necessary information to get up and running with your React app, while also detailing its features and setup. You can adjust or expand sections as needed based on your app's specifics.
+
