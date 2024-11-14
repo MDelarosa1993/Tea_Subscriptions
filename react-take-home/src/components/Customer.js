@@ -40,7 +40,7 @@ function Customer(){
                         <p>Address: {customer.attributes.address}</p>
                     </div>
                     <Link to="/" className="back-link">
-                        <button>Back to Subscriptions</button>
+                        <button>Back to Home</button>
                     </Link>
                 </div>
             ) : (

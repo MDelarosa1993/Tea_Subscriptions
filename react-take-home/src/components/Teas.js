@@ -42,7 +42,7 @@ function Teas() {
       </section>
       <div className="back-to-main">
         <Link to={"/"}>
-          <button className='back-btn'>Back to Subscription Page</button>
+          <button className='back-btn'>Back to Home Page</button>
         </Link>
       </div>
     </div>
