@@ -24,7 +24,7 @@ function Customer(){
     return (
         <>
         <div className="title">
-            <h1>Customer Profile</h1>
+            <h1>Profile</h1>
         </div>
         <div className="customer-profile-container">
             {customer ? (

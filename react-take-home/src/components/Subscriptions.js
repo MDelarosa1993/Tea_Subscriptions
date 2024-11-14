@@ -60,11 +60,13 @@ function Subscription() {
           <p><strong>Price:</strong> ${subscription.attributes.price}</p>
           <p><strong>Status:</strong> {subscription.attributes.status}</p>
           <p><strong>Frequency:</strong> {subscription.attributes.frequency}</p>
-          <Link to={`/customers/${id}`}>
+          
           {subscription.attributes.status !== 'cancelled' && (
-            <p><strong>Customer:</strong> {subscription.attributes.customers.first_name}</p>
+            <Link to={`/customers/${id}`}>
+            <p><strong>Customer</strong></p>
+             </Link>
           )}
-          </Link>
+         
         </div>
 
         <h3 className="teas-heading">Teas Included:</h3>
