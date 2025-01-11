@@ -1,8 +1,4 @@
-# react-take-home
-
----
-
-# Tea Subscription App
+Tea Subscriptions App 🍵
 
 ## Table of Contents
 1. [Overview](#overview)
@@ -37,10 +33,10 @@
 To run this app locally, follow these steps:
 
 1. Clone the repository:
-   git clone https://github.com/MDelarosa1993/tea-subscription-app.git
+   git clone https://github.com:MDelarosa1993/Tea_Subscriptions.git
 
 2. Navigate to the project directory:
-   cd react-take-home
+   cd react-take-home x2
 
 3. Install dependencies:
    npm install
@@ -49,8 +45,8 @@ To run this app locally, follow these steps:
    npm start
    
 
-Your app will be running at `http://localhost:3000`.
-
+Your app will be running at `http://localhost:3001`.
+There is a backend for this: https://github.com/MDelarosa1993/Tea_Subscriptions_Api
 ---
 
 ### Usage
@@ -72,6 +68,7 @@ Once the app is running, you can:
 - **CSS**: For styling the app.
 - **Npm**: For running the app and managing dependencies.
 - **RubyOnRails**: For the Api
+- **Cypress** - For end-to-end testing
 
 ---
 
