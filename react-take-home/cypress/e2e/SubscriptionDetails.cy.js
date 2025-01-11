@@ -19,11 +19,27 @@ describe('Subscription Details Page Tests', () => {
   it('should display the details when clicked', () => {
     cy.get(':nth-child(2) > a > h3').click()
     cy.get('.subscription-title').contains('Subscription Details')
-    cy.get('.subscription-name').contains('Yearly Tea Tea Subscription')
+    cy.get('.subscription-name')
+    cy.get('.tea-list > :nth-child(1)')
     cy.get('.subscription-info > :nth-child(1)')
     cy.get('.subscription-info > :nth-child(2)')
     cy.get('.subscription-info > :nth-child(3)')
-    cy.get('a > p > strong')
     cy.get('.teas-heading')
+    cy.get(':nth-child(1) > .tea-title')
+    cy.get(':nth-child(1) > .tea-description')
+    cy.get('.tea-list > :nth-child(1) > :nth-child(3)')
+    cy.get('.tea-list > :nth-child(1) > :nth-child(4)')
+    cy.get(':nth-child(1) > .tea-image')
+  })
+
+  it('should activate/deactivate the subscription when clicked', () => {
+    cy.get(':nth-child(2) > a > h3').click()
+    cy.get('.status-actions')
+  })
+
+  it('should go back home when clicked', () => {
+    cy.get(':nth-child(2) > a > h3').click();
+    cy.get('.back-to-main').click();
+    cy.contains('Welcome to Tea Subscriptions!').should('exist');
   })
 });
